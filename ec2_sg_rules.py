@@ -96,3 +96,15 @@ for region in ["us-east-1","us-west-1", "us-west-2"]:
 					from_source = source['GroupId']
 					f.write("%s,%s,%s,%s,%s,%s" % ("", "", "", ip_protpcol, to_port, from_source)+"\n")
 f.close() 
+
+# Create an S3 client
+s3 = boto3.client('s3')
+
+filename = '/tmp/security-group.csv'
+bucket_name = 'elasticbeanstalk-us-east-1-861318681782'
+fileOnBucket = 'security-group.csv'
+
+# Uploads the given file using a managed uploader, which will split up large
+# files automatically and upload parts in parallel.
+s3.upload_file(filename, bucket_name, fileOnBucket)
+
