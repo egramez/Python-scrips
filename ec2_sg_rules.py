@@ -1,8 +1,7 @@
 #!/usr/local/bin/python3
 ######################################################################################################################
 # Purpose:      Generate rule report of all the security groups                                                      #
-# Input Params: None 																								 #
-# IAM Role Reauired: EC2                                                                                             #
+# Input Params: None 												     #											 #
 # Author:       Ramesh                                                                                               #
 # Doc. Ref:     http://boto3.readthedocs.io/en/latest/reference/services/ec2.html#EC2.Client.describe_security_groups#
 ######################################################################################################################
